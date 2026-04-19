@@ -10,6 +10,12 @@
 
     extension UIApplication {
         static func getCurrentWindow(filterForegrounded: Bool = true) -> UIWindow? {
+            // UIWindowScene / connectedScenes require iOS 13+.
+            // Fall back to keyWindow on iOS 12 — surveys/autocapture are no-ops there anyway.
+            guard #available(iOS 13.0, tvOS 13.0, *) else {
+                return UIApplication.shared.keyWindow
+            }
+
             let windowScenes = UIApplication.shared
                 .connectedScenes
                 .compactMap { $0 as? UIWindowScene }

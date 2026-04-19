@@ -6,7 +6,8 @@
  * Copyright 2019-Present Datadog, Inc.
  */
 
-#if os(iOS)
+// URLSessionSwizzler patches async URLSession APIs (iOS 15+). No-op on iOS 12/13/14.
+#if os(iOS) && swift(>=5.5)
 
     import Foundation
 

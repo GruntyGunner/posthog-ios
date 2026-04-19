@@ -1,4 +1,7 @@
-#if os(iOS)
+// async/await (Swift concurrency) is not available on iOS 12. The Replay network
+// capture plugin is a no-op on iOS 12 — session recording still works, just
+// without automatic URLSession request capture.
+#if os(iOS) && swift(>=5.5)
     import Foundation
 
     public extension URLSession {

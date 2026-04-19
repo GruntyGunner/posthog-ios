@@ -4,7 +4,9 @@
  * Copyright 2019-Present Datadog, Inc.
  */
 
-#if os(iOS)
+// URLSessionInterceptor uses swizzling that depends on async/await bridging present only
+// in Swift 5.5+ (iOS 13+ concurrency runtime). No-op on iOS 12.
+#if os(iOS) && swift(>=5.5)
 
     import Foundation
 
