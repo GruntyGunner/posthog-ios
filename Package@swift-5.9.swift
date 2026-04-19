@@ -32,6 +32,11 @@ let package = Package(
             path: "PostHog",
             resources: [
                 .copy("Resources/PrivacyInfo.xcprivacy"),
+            ],
+            swiftSettings: [
+                // iOS 12 compat: PostHog uses SwiftUI/Combine (iOS 13+) internally.
+                // We never call PostHog on iOS 12 (guarded by #available at call sites).
+                .unsafeFlags(["-Xfrontend", "-disable-availability-checking"])
             ]
         ),
         .target(
