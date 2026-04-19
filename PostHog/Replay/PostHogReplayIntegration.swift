@@ -1253,6 +1253,7 @@
 
     private protocol AnyObjectUIHostingViewController: AnyObject {}
 
+    @available(iOS 13.0, *)
     extension UIHostingController: AnyObjectUIHostingViewController {}
 
     #if TESTING

@@ -8,6 +8,7 @@
 #if os(iOS)
     import SwiftUI
 
+    @available(iOS 13.0, *)
     struct EdgeBorder: Shape {
         var lineWidth: CGFloat
         var edges: [Edge]

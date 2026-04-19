@@ -4,6 +4,7 @@
 #if os(iOS) && swift(>=5.5)
     import Foundation
 
+    @available(iOS 13.0, *)
     public extension URLSession {
         private func getMonotonicTimeInMilliseconds() -> UInt64 {
             // Get the raw mach time

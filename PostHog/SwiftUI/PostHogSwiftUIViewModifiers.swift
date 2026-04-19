@@ -9,6 +9,7 @@
     import Foundation
     import SwiftUI
 
+    @available(iOS 13.0, *)
     public extension View {
         /**
          Marks a SwiftUI View to be tracked as a $screen event in PostHog when onAppear is called.
@@ -41,6 +42,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     private struct PostHogSwiftUIViewModifier: ViewModifier {
         let viewEventName: String
 

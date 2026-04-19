@@ -81,6 +81,7 @@
                     PostHogFrameCaptureUIView
      ```
      */
+    @available(iOS 13.0, *)
     struct PostHogTagViewModifier: ViewModifier {
         private let id = UUID()
 
@@ -136,6 +137,7 @@
 
     /// A view modifier that adds a full-sized overlay for iOS 26+ layer detection.
     /// This overlay view is used to find CALayers that are contained within its frame.
+    @available(iOS 13.0, *)
     private struct PostHogFrameCaptureModifier: ViewModifier {
         let id: UUID
         let onChange: PostHogTagHandler
@@ -257,6 +259,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     struct PostHogTagView: UIViewRepresentable {
         final class Coordinator {
             let onRemoveHandler: PostHogTagHandler
@@ -444,6 +447,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     private struct PostHogTagAnchorView: UIViewRepresentable {
         var id: UUID
 
@@ -457,6 +461,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     private class PostHogTagAnchorUIView: UIView {
         let id: UUID
 
@@ -473,6 +478,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     final class PostHogTagUIView: UIView {
         let id: UUID
         var handler: (() -> Void)?
@@ -540,6 +546,7 @@
 
     /// Observes layer hierarchy changes on an ancestor view using KVO.
     /// This is used to detect when SwiftUI replaces content (e.g., AsyncImage loading).
+    @available(iOS 13.0, *)
     private final class AncestorSubviewObserver {
         private var observation: NSKeyValueObservation?
 
@@ -563,6 +570,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     private extension UIView {
         var postHogTagView: PostHogTagUIView? {
             get { objc_getAssociatedObject(self, &AssociatedKeys.phTagView) as? PostHogTagUIView }
@@ -653,6 +661,7 @@
     /**
      Boxing a weak reference to a reference type.
      */
+    @available(iOS 13.0, *)
     final class Weak<T: AnyObject> {
         weak var value: T?
 

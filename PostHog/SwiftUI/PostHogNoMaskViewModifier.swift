@@ -9,6 +9,7 @@
 
     import SwiftUI
 
+    @available(iOS 13.0, *)
     public extension View {
         /**
          Marks a SwiftUI View to be excluded from masking in PostHog session replay recordings.
@@ -54,6 +55,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     extension UIView {
         var postHogNoMask: Bool {
             get { objc_getAssociatedObject(self, &AssociatedKeys.phNoMask) as? Bool ?? false }
@@ -61,6 +63,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     extension CALayer {
         var postHogNoMask: Bool {
             get { objc_getAssociatedObject(self, &AssociatedKeys.phNoMask) as? Bool ?? false }

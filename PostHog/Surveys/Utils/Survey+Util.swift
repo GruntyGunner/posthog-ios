@@ -291,6 +291,7 @@
         ]
     }
 
+    @available(iOS 13.0, *)
     extension Color {
         @available(iOS 15.0, *)
         func getContrastingTextColor() -> Color {

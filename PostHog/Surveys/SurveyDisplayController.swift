@@ -8,6 +8,7 @@
 #if os(iOS) || Testing
     import SwiftUI
 
+    @available(iOS 13.0, *)
     final class SurveyDisplayController: ObservableObject {
         @Published var displayedSurvey: PostHogDisplaySurvey?
         @Published var isSurveyCompleted: Bool = false

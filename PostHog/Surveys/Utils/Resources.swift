@@ -11,6 +11,7 @@
 #if os(iOS)
     import SwiftUI
 
+    @available(iOS 13.0, *)
     struct VeryDissatisfiedEmoji: Shape {
         func path(in rect: CGRect) -> Path {
             var path = Path()
@@ -85,6 +86,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     struct VerySatisfiedEmoji: Shape {
         func path(in rect: CGRect) -> Path {
             var path = Path()
@@ -167,6 +169,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     struct DissatisfiedEmoji: Shape {
         func path(in rect: CGRect) -> Path {
             var path = Path()
@@ -238,6 +241,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     struct NeutralEmoji: Shape {
         func path(in rect: CGRect) -> Path {
             var path = Path()
@@ -303,6 +307,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     struct SatisfiedEmoji: Shape {
         func path(in rect: CGRect) -> Path {
             var path = Path()
@@ -374,6 +379,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     struct ThumbsUpEmoji: Shape {
         func path(in rect: CGRect) -> Path {
             var path = Path()
@@ -446,6 +452,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     struct ThumbsDownEmoji: Shape {
         func path(in rect: CGRect) -> Path {
             var path = Path()
@@ -518,6 +525,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     struct CheckIcon: Shape {
         func path(in rect: CGRect) -> Path {
             var path = Path()

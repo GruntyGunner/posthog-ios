@@ -8,6 +8,7 @@
 #if os(iOS)
     import SwiftUI
 
+    @available(iOS 13.0, *)
     extension View {
         /// Reads frame changes of current view in a coordinate space (default global)
         @available(iOS 14.0, *)

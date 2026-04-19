@@ -10,6 +10,7 @@
     import SwiftUI
 
     /// A SwiftUI ViewModifier that listens for deep link events and forwards them to PostHog.
+    @available(iOS 13.0, *)
     private struct PostHogDeepLinkListener: ViewModifier {
         let posthog: PostHogSDK?
 
@@ -32,6 +33,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     public extension View {
         /// Attach a PostHog deep link listener to this view. The listener will forward
         /// .onOpenURL and .onContinueUserActivity events to the provided PostHogSDK instance.

@@ -8,6 +8,7 @@
 #if os(iOS) || targetEnvironment(macCatalyst)
     import SwiftUI
 
+    @available(iOS 13.0, *)
     public extension View {
         /**
          Adds a custom label to this view for use with PostHog's auto-capture functionality.
@@ -33,6 +34,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     private struct PostHogLabelTaggerViewModifier: ViewModifier {
         let label: String?
 
@@ -49,6 +51,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     private struct PostHogLabelViewTagger: UIViewRepresentable {
         let label: String
 
@@ -61,6 +64,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     private class PostHogLabelTaggerView: UIView {
         private let label: String
         weak var taggedView: UIView?
@@ -128,6 +132,7 @@
 
     // MARK: - Helpers
 
+    @available(iOS 13.0, *)
     private extension UIView {
         func siblings() -> [UIView] {
             superview?.subviews.reduce(into: []) { result, current in
@@ -145,12 +150,18 @@
         }
     }
 
+    @available(iOS 13.0, *)
     protocol PostHogSwiftUITaggable: UIView { /**/ }
 
+    @available(iOS 13.0, *)
     extension UIControl: PostHogSwiftUITaggable { /**/ }
+    @available(iOS 13.0, *)
     extension UIPickerView: PostHogSwiftUITaggable { /**/ }
+    @available(iOS 13.0, *)
     extension UITextView: PostHogSwiftUITaggable { /**/ }
+    @available(iOS 13.0, *)
     extension UICollectionView: PostHogSwiftUITaggable { /**/ }
+    @available(iOS 13.0, *)
     extension UITableView: PostHogSwiftUITaggable { /**/ }
 
 #endif

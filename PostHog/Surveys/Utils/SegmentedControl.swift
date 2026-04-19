@@ -8,6 +8,7 @@
 #if os(iOS)
     import SwiftUI
 
+    @available(iOS 13.0, *)
     struct SegmentedControl<Indicator: View, Segment: View, Separator: View>: View {
         var range: ClosedRange<Int>
         var height: CGFloat = 45
@@ -85,6 +86,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     private struct SizeKey: PreferenceKey {
         static var defaultValue: CGSize = .zero
         static func reduce(value: inout CGSize, nextValue: () -> CGSize) {

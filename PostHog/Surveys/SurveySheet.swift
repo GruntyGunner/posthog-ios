@@ -95,6 +95,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     extension View {
         @available(iOS 15, *)
         func surveyBottomSheet(height: CGFloat) -> some View {
@@ -163,6 +164,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     struct SwiftUISurveyAppearance {
         var fontFamily: Font
         var backgroundColor: Color
@@ -189,6 +191,7 @@
         static let defaultValue: SwiftUISurveyAppearance = .getAppearanceWithDefaults()
     }
 
+    @available(iOS 13.0, *)
     extension EnvironmentValues {
         @available(iOS 15.0, *)
         var surveyAppearance: SwiftUISurveyAppearance {
@@ -197,6 +200,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     extension SwiftUISurveyAppearance {
         @available(iOS 15.0, *)
         static func getAppearanceWithDefaults(_ appearance: PostHogDisplaySurveyAppearance? = nil) -> SwiftUISurveyAppearance {
@@ -269,6 +273,7 @@
         }
     }
 
+    @available(iOS 13.0, *)
     extension Font {
         static func customFont(family: String) -> Font? {
             if let uiFont = UIFont(name: family, size: UIFont.systemFontSize) {
